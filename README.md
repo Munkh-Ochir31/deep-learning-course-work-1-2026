@@ -2,4 +2,4 @@
 ###### CLI 
 ollama run qwen3.5:0.8b
 ###### More read
-https://ollama.com/library/qwen3.5:0.8b
+https://ollama.com/library/qwen3.5:0.8bs
