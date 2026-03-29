@@ -1,0 +1,16 @@
+{"event": "train_start", "time": "2026-03-30T03:37:25.638589", "config": {"model": "Qwen/Qwen2.5-3B", "epochs": 1, "batch_size": 2, "grad_accum": 8, "effective_batch": 16, "lr": 0.0002, "max_seq_length": 512, "lora_r": 16, "lora_alpha": 32}}
+{"event": "step", "step": 10, "epoch": 0.0, "train_loss": 2.3489, "lr": 1.7142857142857145e-05, "vram_gb": 2.7}
+{"event": "step", "step": 20, "epoch": 0.01, "train_loss": 2.3484, "lr": 3.619047619047619e-05, "vram_gb": 2.7}
+{"event": "step", "step": 30, "epoch": 0.01, "train_loss": 2.2752, "lr": 5.5238095238095244e-05, "vram_gb": 2.7}
+{"event": "step", "step": 40, "epoch": 0.01, "train_loss": 2.1811, "lr": 7.428571428571429e-05, "vram_gb": 2.7}
+{"event": "step", "step": 50, "epoch": 0.01, "train_loss": 2.1677, "lr": 9.333333333333334e-05, "vram_gb": 2.7}
+{"event": "step", "step": 60, "epoch": 0.02, "train_loss": 2.0976, "lr": 0.00011238095238095239, "vram_gb": 2.7}
+{"event": "step", "step": 70, "epoch": 0.02, "train_loss": 2.1025, "lr": 0.00013142857142857143, "vram_gb": 2.7}
+{"event": "step", "step": 80, "epoch": 0.02, "train_loss": 2.0295, "lr": 0.00015047619047619048, "vram_gb": 2.7}
+{"event": "step", "step": 90, "epoch": 0.03, "train_loss": 2.0396, "lr": 0.00016952380952380954, "vram_gb": 2.7}
+{"event": "step", "step": 100, "epoch": 0.03, "train_loss": 2.0068, "lr": 0.00018857142857142857, "vram_gb": 2.7}
+{"event": "step", "step": 110, "epoch": 0.03, "train_loss": 1.934, "lr": 0.00019999930518093827, "vram_gb": 2.7}
+{"event": "step", "step": 120, "epoch": 0.03, "train_loss": 1.9478, "lr": 0.0001999914885773805, "vram_gb": 2.7}
+{"event": "step", "step": 130, "epoch": 0.04, "train_loss": 1.9455, "lr": 0.00019997498752758724, "vram_gb": 2.7}
+{"event": "step", "step": 140, "epoch": 0.04, "train_loss": 1.9454, "lr": 0.00019994980346470535, "vram_gb": 2.7}
+{"event": "step", "step": 150, "epoch": 0.04, "train_loss": 1.8826, "lr": 0.0001999159385760174, "vram_gb": 2.7}
