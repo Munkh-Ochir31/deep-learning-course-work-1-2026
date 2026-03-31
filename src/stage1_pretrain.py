@@ -143,6 +143,10 @@ tokenized_dataset = dataset.map(
 split = tokenized_dataset.train_test_split(test_size=0.1, seed=42)
 train_dataset = split["train"]
 eval_dataset = split["test"]
+# Eval dataset-ийг хязгаарлах (GPU timeout-аас сэргийлэх)
+MAX_EVAL_SAMPLES = 500
+if len(eval_dataset) > MAX_EVAL_SAMPLES:
+    eval_dataset = eval_dataset.select(range(MAX_EVAL_SAMPLES))
 print(f"  Train: {len(train_dataset)}, Eval: {len(eval_dataset)}")
 
 # DataCollator: batch үүсгэх, padding нэмэх, label үүсгэх
@@ -284,8 +288,16 @@ trainer = Trainer(
     callbacks=[log_callback],  # Log callback залгах
 )
 
-# Сургалт эхлүүлэх
-train_result = trainer.train()
+# Сургалт эхлүүлэх (checkpoint байвал үргэлжлүүлнэ)
+resume_checkpoint = None
+if os.path.isdir(OUTPUT_DIR):
+    checkpoints = [d for d in os.listdir(OUTPUT_DIR) if d.startswith("checkpoint-")]
+    if checkpoints:
+        latest = max(checkpoints, key=lambda x: int(x.split("-")[1]))
+        resume_checkpoint = os.path.join(OUTPUT_DIR, latest)
+        print(f"  Checkpoint олдлоо: {resume_checkpoint}")
+
+train_result = trainer.train(resume_from_checkpoint=resume_checkpoint)
 
 # ============================================================
 # 7. Хадгалах ба Үнэлэх

@@ -1,0 +1,11 @@
+{
+  "model": "Qwen/Qwen2.5-3B",
+  "total_steps": 3476,
+  "start_time": "2026-03-30T23:49:27.318174",
+  "end_time": "2026-03-31T05:49:45.843017",
+  "duration_minutes": 360.3,
+  "final_train_loss": 1.2608,
+  "best_eval_loss": 1.2788,
+  "best_perplexity": 3.59,
+  "loss_history_length": 247
+}
